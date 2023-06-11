@@ -1,0 +1,116 @@
+Body{
+		background-color : lightblue;
+		background-image : "keikoware_back.gif";
+		}
+input.txt{
+		color: #000000; 
+		// background-color: #cdcdcd; 
+		background-color: #ffffff; 		
+		text-align: Left; 
+		font-family: Verdana; 
+		font-size: 10 pt;
+	  border-style : solid; 
+	  border-color : #0034c5 
+	  }
+textarea{ 
+		color: #000000; 
+		// background-color: #cdcdcd; 
+		background-color: #ffffff; 		
+		font-family: Verdana; 
+		font-size: 10 pt; 
+    border-style : solid; 
+    border-color : #0034c5 
+    }
+form.line{
+		padding-top: 0; 
+		padding-bottom: 0;
+		margin-top: 0; 
+		margin-bottom: 0;
+}
+input.but{
+		color: #ffffff;
+		background-color: #0B1773; 
+		text-align: center; 
+		font-family: Verdana; 
+		font-size: 8 pt;
+		border-style : solid; 
+		border-color : #0034c5 
+		}
+input.butoff{
+		color: #808080;
+		background-color: #c0c0c0; 
+		text-align: center; 
+		font-family: Verdana; 
+		font-size: 8 pt;
+		border-style : solid; 
+		border-color : #909090;
+		}
+input.edit{
+		color: Blue;
+		background-color: lightblue; 
+		text-align: center; 
+		font-family: Verdana; 
+		font-size: 7 pt;
+		border-style : solid; 
+		border-color : #0034c5 
+		}
+input.delete{
+		color: #ffffff;
+		background-color: RED; 
+		text-align: center; 
+		font-family: Verdana; 
+		font-size: 7 pt;
+		border-style : solid; 
+		border-color : #0034c5 
+		}
+TD.head{
+		border:3px solid #000000;
+		background-color : #010167;
+		font-family: Times New Roman;
+		font-size: 24 pt;
+		font-weight: bold;
+		margin-top: 20;
+		margin-bottom: 20;
+		padding-top: 5; 
+		padding-bottom: 5
+		}
+TD.menu{
+		border: 3px solid #000000; 
+		background-color : lightblue;
+		font-family: Times New Roman;
+		font-size: 12 pt;
+		padding-left: 4; 
+		padding-right: 4; 
+		padding-top: 1; 
+		padding-bottom: 1
+		}
+TD.forum{
+		border: 3px solid #000000; 
+		background-color : lightblue;
+		font-family: Times New Roman;
+		font-size: 12 pt;
+		padding-left: 4; 
+		padding-right: 4; 
+		padding-top: 1; 
+		padding-bottom: 1
+		}
+I.forum{
+		font-family: Times New Roman;
+		font-size: 8 pt;
+		}
+B.datetime{
+		font-family: Times New Roman;
+		font-size: 8 pt;
+		padding-top: 0; 
+		padding-bottom: 0;
+		margin-top: 0; 
+		margin-bottom: 0;
+		}
+A.forum            { Color : orange; text-decoration : none; }
+A.forum:visited    { Color : orange; text-decoration : none; }
+A.forum:hover      { Color : White; text-decoration : none; text-weight : bold;}
+A.forum:activeA    { Color : orange text-decoration : none; }
+A.reply            { Color : darkblue; text-decoration : none; }
+A.reply:visited    { Color : darkblue; text-decoration : none; }
+A.reply:hover      { Color : White; text-decoration : none; text-weight : bold;}
+A.reply:activeA    { Color : darkblue text-decoration : none; }

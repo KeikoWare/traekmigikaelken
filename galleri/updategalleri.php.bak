@@ -1,0 +1,157 @@
+<?php
+//session
+session_start();
+
+include('../dbconnect/dbconnect.php');
+
+$action = @$_REQUEST["action"];
+$galleri = @$_REQUEST["galleri"];
+
+switch($action){
+	case 1: // opret galleri
+			$sql = "INSERT INTO `billeder_galleri` ( `navn` , `beskrivelse` , `opretter` , `oprettet` , `billed` , `lukket` , `slettet` ) VALUES ( '".addslashes($_POST["navn"])."', '".addslashes($_POST["beskrivelse"])."', '".$_SESSION["userID"]."', NOW( ) , '', 'nej', 'nej');";
+			$result = mysql_query($sql);
+			$galleri = mysql_insert_id();
+			$billed = "";
+			break;
+	case 2: // upload billed
+			function thumbnail($image_path,$thumb_path,$image_name,$thumb_name,$thumb_width) 
+			{ 
+			    $src_img = imagecreatefromjpeg("$image_path/$image_name"); 
+			    $origw=imagesx($src_img); 
+			    $origh=imagesy($src_img); 
+			    $new_w = $thumb_width; 
+			    $diff=$origw/$new_w; 
+			    $new_h=$origh/$diff; 
+			    $dst_img = imagecreatetruecolor($new_w,$new_h); 
+			    imagecopyresampled($dst_img,$src_img,0,0,0,0,$new_w,$new_h,imagesx($src_img),imagesy($src_img)); 
+			
+			    imagejpeg($dst_img, "$thumb_path/$thumb_name"); 
+			    return true; 
+			} 
+			$result = mysql_query("SELECT COUNT(*) FROM `billeder_billed`;");
+			$data = mysql_fetch_row($result);
+			$count = ($data[0] + 20000);
+
+			$galleri = @$_POST["galleri"];
+			$user = @$_SESSION["userID"];
+			$uploadresult = "resultat";
+			foreach ($_FILES["userfile"]["error"] as $key => $error) {
+		    if ($error == UPLOAD_ERR_OK) {
+
+	        $tmp_name = $_FILES["userfile"]["tmp_name"][$key];
+	        $name = $_FILES["userfile"]["name"][$key];
+
+					$org_name = $_FILES["userfile"]["name"][$key];
+					$ext = strtolower(substr(strrchr($org_name, '.'), 1));
+					$org_size = @$_FILES["userfile"]["size"][$key];
+					$pic_name = "pic_".($count+$key).".".$ext;
+					$tmb_name = "tmb_".($count+$key).".jpg";
+			
+					if(copy($tmp_name, "billeder/".$pic_name))
+					{
+						if($ext == "jpg"){
+							thumbnail('billeder','thumbs',$pic_name,$tmb_name,'140');
+						}
+						$result = mysql_query("INSERT INTO billeder_billed VALUES ('',$galleri,'".$org_name."','".$pic_name."','".$tmb_name."', '$user', '' , now(),'nej','nej')");
+						if(mysql_errno() == 0){
+							$result = mysql_query("UPDATE `billeder_galleri` SET `billed` = '$tmb_name' WHERE id = $galleri LIMIT 1;");
+							if(mysql_errno() != 0) echo mysql_error();
+						}
+						$uploadresult += "_$key:succes";
+			    }	else{	
+						$uploadresult += "_$key:CpYeRRor";
+					} // IF copy
+		    }	else{	
+					$uploadresult += "_$key:UpeRRor";
+				} // IF upload_error_ok
+			} // FOREACH file
+			header ("Location: ../?menu=102&action=1&galleri=$galleri&res=".urlencode($uploadresult));
+			break;
+	case 3: // tilføj kommentar
+			$billed =  @$_POST["billed"];
+			$tekst = addslashes(@$_POST["tekst"]);
+			$sql= "UPDATE `billeder_billed` SET `kommentar` = '$tekst' WHERE `id` = $billed;";
+			$result = mysql_query($sql);
+			// echo $result . "<br>" . $sql;
+			header ("Location: ../?menu=102&action=1&galleri=$galleri&res=kommentsucces");
+			break;
+	case 4: // slet billed
+			$billed =  @$_GET["billed"];
+			$result = mysql_query("UPDATE `billeder_billed` SET `slettet` = 'ja' WHERE `id` = $billed;");
+			header ("Location: ../?menu=102&action=1&galleri=$galleri&res=succes");
+			break;
+	case 5: // luk galleri
+			$galleri = @$_GET["galleri"];
+			$result = mysql_query("UPDATE `billeder_galleri` SET `lukket` = 'ja' WHERE `id` = $galleri;");
+			header ("Location: ../?menu=102&return=luk&mysql=".mysql_errno());
+			break;
+	case 6: // åbn galleri
+			$galleri = @$_GET["galleri"];
+			$result = mysql_query("UPDATE `billeder_galleri` SET `lukket` = 'nej' WHERE `id` = $galleri;");
+			header ("Location: ../?menu=102&return=aabn&mysql=".mysql_errno());
+			break;
+	case 7: // slet galleri
+			$galleri = @$_GET["galleri"];
+			$result = mysql_query("UPDATE `billeder_galleri` SET `slettet` = 'ja' WHERE `id` = $galleri ;");			
+			header ("Location: ../?menu=102&return=slet&mysql=".urlencode(mysql_error()));
+			break;
+	case 8: // gendan galleri
+			$galleri = @$_GET["galleri"];
+			$result = mysql_query("UPDATE `billeder_galleri` SET `slettet` = 'nej' WHERE `id` = $galleri;");			
+			header ("Location: ../?menu=102&return=gendan&mysql=".mysql_errno());
+			break;
+	case 9: // behandl uploadede billeder i tmp dir
+			function thumbnail($image_path,$thumb_path,$image_name,$thumb_name,$thumb_width) 
+			{ 
+			    $src_img = imagecreatefromjpeg("$image_path/$image_name"); 
+			    $origw=imagesx($src_img); 
+			    $origh=imagesy($src_img); 
+			    $new_w = $thumb_width; 
+			    $diff=$origw/$new_w; 
+			    $new_h=$origh/$diff; 
+			    $dst_img = imagecreatetruecolor($new_w,$new_h); 
+			    imagecopyresampled($dst_img,$src_img,0,0,0,0,$new_w,$new_h,imagesx($src_img),imagesy($src_img)); 
+			
+			    imagejpeg($dst_img, "$thumb_path/$thumb_name"); 
+			    return true; 
+			} 
+			$result = mysql_query("UPDATE `billeder_count` SET `count` =`count` +1 WHERE `id` =1 LIMIT 1 ;");
+			$result = mysql_query("SELECT `count` FROM `billeder_count`WHERE `id` =1 LIMIT 1 ;");
+			$count = mysql_fetch_row($result);
+
+
+			if ($handle = opendir('tmp')) {
+			    while (false !== ($file = readdir($handle))) { 
+			        if ($file != "." && $file != "..") { 
+			
+									$galleri = @$_POST["galleri"];
+									$user = @$_SESSION["userID"];
+									$tekst = "";
+									$org_name = $file;
+									$org_size = filesize('tmp/'.$file);
+									$pic_name = "pic_".$count[0].".jpg";
+									$tmb_name = "tmb_".$count[0].".jpg";
+									
+									if(copy('tmp/'.$file, "billeder/".$pic_name))
+									{
+										if(thumbnail('billeder','thumbs',$pic_name,$tmb_name,'140') ) {
+											
+											$result = mysql_query("INSERT INTO billeder_billed VALUES ('',$galleri,'".$org_name."','".$pic_name."','".$tmb_name."', '$user','$tekst' , now(),'nej','nej')");
+											if(mysql_errno() == 0){
+												$result = mysql_query("UPDATE `billeder_galleri` SET `billed` = '$tmb_name' WHERE id = $galleri LIMIT 1;");
+												if(mysql_errno() != 0) echo mysql_error();
+											}
+										}
+									}
+			        }
+						unlink('tmp/'.$file);
+			    }
+			    closedir($handle); 
+			}
+			
+			break;
+
+}
+
+header ("Location: ../?menu=102&action=1&galleri=$galleri");

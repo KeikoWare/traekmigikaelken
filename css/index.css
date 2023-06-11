@@ -1,0 +1,275 @@
+/* 
+		
+		Klan side for de ni, som ikke kan finde et navn til deres klan
+		Copyright KeikoWare 2006. 
+   
+*/
+
+   
+body {
+		background :  '#ddeeff';
+		font-family : verdana;
+		font-size : 10px;
+		color : #000000;
+		margin : 0 0 0 0;
+}
+
+a {
+		margin-top: 10px;
+		color : orange;
+		text-decoration : none;
+}
+a:hover {
+		color : red;
+}
+a.menu {
+		margin-top: 10px;
+		color : white;
+		text-decoration : none;
+}
+
+.top{ 
+		border : 0 solid black;
+		background : url('../images/klan_03.gif');
+		text-align : center;
+}
+
+.top_text{
+		vertical-align: center;
+		font-family : verdana;
+		font-size : 18px;
+		font-weight : bold;
+		text-align : center;
+		color : #000000;
+}
+
+.logo{ 
+		background: url('../images/klan_02.gif') no-repeat top left;
+}
+
+.menu{
+		font-family : verdana;
+		font-size : 12px;
+		vertical-align : top;
+		background : #003399; 
+		color : #ffffff;
+		font-family : verdana;
+		padding-left : 5px;
+}		
+
+.stats{
+		color : #cccccc;
+		border-right: 1 solid #000000;
+		font-family : courier new;
+		font-size: 10px;
+		font-weight: normal;
+		text-align : left;
+		vertical-align: bottom;		
+}
+
+td{
+		color: #000000; 
+		font-family: verdana; 
+		font-size: 10 pt;
+}
+		
+input.txt{
+		color: #000000; 
+		background-color: #ffffff; 		
+		text-align: left; 
+		font-family: verdana; 
+		font-size: 10 pt;
+		border : solid black 1; 
+}
+
+textarea{ 
+		color: #000000; 
+		background-color: #ffffff; 		
+		font-family: verdana; 
+		font-size: 10 pt; 
+		border : solid black 1; 
+    }
+    
+form.line{
+		padding-top: 0; 
+		padding-bottom: 0;
+		margin-top: 0; 
+		margin-bottom: 0;
+}
+
+input.b_on{
+		color: #000000;
+		text-align: center; 
+		font-family: verdana; 
+		font-size: 8 pt;
+		border : solid black 1; 
+		cursor: hand;
+		}
+		
+input.but{
+		color: #000000;
+		text-align: center; 
+		font-family: verdana; 
+		font-size: 8 pt;
+		border : solid black 1; 
+		cursor: hand;
+		}
+		
+input.b_off{
+		color: #c0c0c0;
+		text-align: center; 
+		font-family: verdana; 
+		font-size: 8 pt;
+		border : solid #c0c0c0 1;
+		cursor: hand;
+		}
+		
+input.edit{
+		color: blue;
+		background-color: lightblue; 
+		text-align: center; 
+		font-family: verdana; 
+		font-size: 7 pt;
+		border : solid black 1; 
+		cursor: hand;
+		}
+		
+input.delete{
+		color: #ffffff;
+		background-color: red; 
+		text-align: center; 
+		font-family: verdana; 
+		font-size: 7 pt;
+		border : solid black 1; 
+		}
+
+/* kalender typografi */
+table.calender{
+		border : 1 solid black;
+}
+
+td.cal {	color : black;
+		background-color : lightgrey;
+		font-family : courier new;
+		font-size: 12 px;
+		font-weight: normal;
+		text-align : center;
+		border : 1 solid black;
+		padding : 0cm 0.1cm 0cm 0.1cm;
+}		
+
+td.calmonth {	color : Gold;
+		background-color : #666666;
+		font-family : Verdana;
+		font-size: 14 px;
+		font-weight: bold;
+		text-align : center;
+		border : solid black 1;
+		padding : 0.2cm 0cm 0.2cm 0cm;
+}		
+
+td.calday {	color : black;
+		background-color : lightgrey;
+		font-family : courier new;
+		font-size: 10 px;
+		font-weight: bold;
+		text-align : center;
+		cursor : hand;
+		border : 1 solid black;
+}		
+
+/* kalendertypografi slut */
+
+/* forum typografi */
+form.line{
+		padding-top: 0; 
+		padding-bottom: 0;
+		margin-top: 0; 
+		margin-bottom: 0;
+}
+
+td.forum{
+		border: 3px solid #000000; 
+		background-color : lightblue;
+		font-family: verdana;
+		font-size: 10 pt;
+		padding-left: 4; 
+		padding-right: 4; 
+		padding-top: 1; 
+		padding-bottom: 1;
+		}
+		
+i.forum{
+		font-family : verdana;
+		font-size: 8 pt;
+		}
+		
+b.datetime{
+		font-family: times new roman;
+		font-size: 8 pt;
+		color : #cccccc;
+		padding-top: 0; 
+		padding-bottom: 0;
+		margin-top: 0; 
+		margin-bottom: 0;
+		}
+		
+a.forum            
+{
+		color : orange; 
+		text-decoration : none; 
+}
+
+a.forum:visited    
+{
+		color : orange;
+		text-decoration : none;
+}
+
+a.forum:hover      
+{
+		color : red;
+		text-decoration : none;
+}
+
+a.forum:activea    
+{
+		color : orange;
+		text-decoration : none; 
+}
+
+a.reply            
+{
+		color : blue;
+		text-decoration : none;
+}
+
+a.reply:visited    
+{
+		color : blue;
+		text-decoration : none; 
+}
+
+a.reply:hover      
+{
+		color : red;
+		text-decoration : none;
+}
+
+a.reply:active
+{
+		color : blue;
+		text-decoration : none;
+}
+
+p.leftmargin 
+{
+		margin-left: 1cm; 
+		margin-top: 0cm
+}
+
+.indryk{
+	margin-left : 20px;
+}
+
+/* forum typografi slut /*

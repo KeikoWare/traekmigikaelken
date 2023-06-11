@@ -1,0 +1,143 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+	<meta HTTP-EQUIV="Content-Type" Content="text-html; charset=iso8859-1">
+	<link rel="stylesheet" href="help_styles.css" type="text/css">
+</head>
+
+<body>
+<br>
+<table border="0" cellpadding="0" cellspacing="0" width="90%" class="wmh_reg">
+<tr>
+	<td align="center" class="wmh_header">WebMail PHP Installation Instructions for Unix</td>
+<tr>
+	<td>
+	<br>
+	<ol>
+		<li>
+			Download <b>webmail_php.zip</b> archive.
+		</li>
+		<br><br>
+		<li>
+			Unpack contents of <b>web</b> folder from archive into subfolder of web-folder on your web server.
+			 For example into <b>/var/www/html/webmailphp</b>.
+		</li>
+		<br><br>
+		<li>
+			Unpack contents of <b>data</b> folder from archive into any folder on your web server.
+			 For example into <b>/var/webmail_data</b>. In this folder MailBee WebMail PHP stores
+			 configuration file and temporary files. Please note, to protect this folder contents 
+			 from unauthorized access, make sure this folder cannot be accessed from the web.
+		</li>
+		<br><br>
+		<li>
+			Now you should assign owners and their rights.
+		<br><br>
+			Change the current working directory to the folder with WebMail PHP scripts:<br>
+			<b>cd /var/www/html/webmailphp/</b>
+		<br><br>
+			Assign rights to files and folders:<br>
+			<b>find . -type d -exec chmod 755 {} \;</b><br>
+			<b>find . -type f -exec chmod 644 {} \;</b>
+		<br><br>
+			Assign owner to files and folders. You can assign another owner (the same as owner of other folders/files in /var/www/html/):<br>
+			<b>find . -type d -exec chown root.root {} \;</b><br>
+			<b>find . -type f -exec chown root.root {} \;</b>
+		<br><br>
+			Change the current directory to the WebMail PHP working folder:<br>
+			<b>cd /var/webmail_data/</b>
+		<br><br>
+			Assign rights to files and folders:<br>
+			<b>find . -type d -exec chmod 755 {} \;</b><br>
+			<b>find . -type f -exec chmod 644 {} \;</b>
+		<br><br>
+			Assign owner to files and folders. Please note, Apache can be started under another user 
+			account, for example, under <b>nobody.nogroup</b>. Apache process (httpd) should have write 
+			permission to the specified folder, thus, you should assign as owner user Apache is running under:<br>
+			<b>find . -type d -exec chown apache.apache {} \;</b><br>
+			<b>find . -type f -exec chown apache.apache {} \;</b>
+		</li>
+		<br><br>
+		<li>
+			You should specify path to the MailBee WebMail PHP working folder in 
+			<b>/var/www/html/webmailphp/settings_path.php</b> file (for example <b>/var/webmail_data/</b>).
+		</li>
+		<br><br>
+		<li>
+			Please make sure extensions php-imap, php-iconv, php-domxml (php-dom for PHP 5 and higher) exist. PHP should be able to use 
+			these extensions. If one of these extensions is not available, you will get one of the following 
+			messages:
+		<br><br>
+			<font color="red"><b>The IMAP module does not seem to be installed on this PHP setup.</b></font>
+		<br><br>
+			<font color="red"><b>The ICONV module does not seem to be installed on this PHP setup.</b></font>
+		<br><br>
+			<font color="red"><b>The DOM XML module does not seem to be installed on this PHP setup.</b></font>
+		<br><br>
+			<font color="red"><b>The DOM module does not seem to be installed on this PHP setup.</b></font>
+		<br><br>
+			In order to solve this problem, you should install these extensions from packages of your OS 
+			distributive. Please note, extension major version must be the same as PHP engine major version.
+		<br><br>
+			Then you should restart Apache:<br>
+			<b>/etc/init.d/httpd restart</b>
+		</li>
+		<br><br>
+		<li>
+			In your browser, navigate to <font color="blue"><b>http://yourserver.com/webmailphp/mailadm.php</b></font> and type <b>"mailadm"</b> as login and <b>"12345"</b> as default password 
+			to enter the <b>Administration Console</b>. Once logged in, it's recommended to click <b>WebMail Settings</b> to change the default password 
+			and then click <b>"Save"</b> button to apply changes.
+		</li>
+		<br><br>
+		<li>
+			Now you can edit the following settings:<br><br>
+			<ul>
+				<li>
+					WebMail settings
+				</li>
+				<li>
+					Interface settings
+				</li>
+				<li>
+					Login settings
+				</li>
+				<li>
+					Debug settings
+				</li>
+			</ul>
+			<br>
+			Also, you can browse the online documentation (<b>"Help"</b> link) or log out of 
+			<b>Administration Console</b> (<b>"Exit"</b> link).
+		</li>
+		<br><br>
+		<li>
+			Now installation is complete. Please refer to <b>Administration Panel</b> for administration details.
+			<br><br>
+			See <a href="webmail_administration.html">WebMail PHP administration</a>
+		</li>
+		<br><br>
+
+		<li>
+			MailBee WebMail PHP is ready to use.
+			<br><br>
+			Start using it at <font color="blue"><b>http://your_server_name/webmailphp/index.php</b></font>.
+		</li>
+		<br><br>
+
+	</ol>
+	<br>
+	<hr>
+	</td>
+</tr>
+<tr>
+	<td align="center">
+If you have any questions don't hesitate to email to <a href="mailto:support@afterlogic.com">support@afterlogic.com</a><br>
+Or visit our support web page at <a href="http://www.afterlogic.com/support" target="_blank">http://www.afterlogic.com/support</a><br>
+or web forum at <a href="http://www.afterlogic.com/forum" target="_blank">http://www.afterlogic.com/forum</a>
+	</td>
+</tr>
+</table>
+
+
+</body>
+</html>

@@ -1,0 +1,654 @@
+body, .wm_body_main
+{
+	margin: 0px;
+	padding: 0px;
+	background: #369;
+}
+
+.wm_body 
+{
+	background: white;
+}
+
+label 
+{
+	cursor: pointer;
+	cursor: hand;
+}
+
+img
+{
+	border: 0;
+}
+
+td
+{
+	padding: 0px;
+	margin: 0px;
+}
+
+.wm_log_file
+{
+	padding: 8px 8px 0px 0px;
+	font: 13px Tahoma, Arial, Helvetica, sans-serif;
+	text-align: right;
+}
+
+.wm_space_before
+{
+	padding-top: 10px;
+}
+
+a.wm_reg
+{
+	padding: 0px 4px 0px 0px;
+	font: normal 13px Tahoma, Arial, Helvetica, sans-serif;
+	color: black;
+	text-decoration: underline;
+}
+
+a.wm_reg:hover
+{
+	text-decoration: none;
+}
+
+.wm_dialog, .wm_mailadm_dialog, .wm_mailadm_console_dialog
+{
+	margin: 20px;
+	background: #eeeee2; 
+	border-collapse: collapse;
+	border: solid 2px #03c;
+}
+
+.wm_dialog_redirect_header, .wm_dialog_login_header,
+.wm_mailadm_dialog_settings_header, .wm_mailadm_dialog_header
+{
+	padding: 6px;
+	background: #0033CC;
+	color: #fff;
+	border: 0px;
+	font: bold 12px Tahoma, Arial, Helvetica, sans-serif;
+}
+
+.wm_dialog_login_header, .wm_dialog_redirect_header, .wm_mailadm_dialog_header
+{
+	text-align: right;
+}
+
+.wm_mailadm_dialog_settings_header
+{
+	text-align: left;
+}
+
+.wm_dialog_login_switcher
+{
+	padding-top: 4px;
+	display: block;
+	float: left;
+}
+
+.wm_dialog_login_button
+{
+	display: block;
+	float: right;
+}
+
+.wm_dialog_login_field, .wm_dialog_field,
+.wm_dialog_hide_login_field, .wm_dialog_redirect_field
+{
+	padding: 4px 4px 4px 6px;
+	background: #eeeee2;
+	border: solid 1px #eeeee2;
+	color: #000000;
+	font: normal 11px Tahoma, Arial, Helvetica, sans-serif;
+ }
+
+.wm_dialog_field
+{
+	text-align: right;
+}
+
+.wm_dialog_login_field
+{
+	text-align: left;
+	vertical-align: middle;
+}
+
+.wm_dialog_hide_login_field
+{
+	text-align: right;
+	vertical-align: top;
+}
+
+.wm_dialog_redirect_field
+{
+	text-align: right;
+	vertical-align: middle;
+}
+
+.wm_dialog_button_field
+{
+	text-align: right;
+ 	vertical-align: middle;
+	padding: 4px;
+	background: #eeeee2;
+	border: solid 1px #eeeee2;
+ }
+
+.wm_dialog_edit_disabled, .wm_dialog_edit, .wm_dialog_button_edit
+{
+	padding: 4px;
+	background: white;
+	border: solid 1px #D8D8CD;	
+	font: normal 11px Tahoma, Arial, Helvetica, sans-serif;
+}
+
+.wm_dialog_edit, .wm_dialog_edit_disabled
+{
+	text-align: left;
+}
+
+.wm_dialog_button_edit
+{
+	text-align: right;
+}
+
+.wm_dialog_edit_disabled
+{
+	color: #aaaaaa;
+}
+
+.wm_accountslist
+{
+	width: 100%;
+	background: #4791C5;
+	border: solid 1px;
+	border-color: #87B3D0 #4791C5 #10659E #4791C5;
+}
+
+.wm_accountslist_item, .wm_accountslist_item_selected
+{
+	padding: 7px;
+	display: block;
+	background: #4791C5;
+	font: 11px Tahoma, Arial, Helvetica, sans-serif;
+}
+
+.wm_accountslist_item_selected
+{
+	font-weight: bold;
+	border-right: solid 1px #10659E;
+	float: left;
+}
+
+.wm_accountslist_item
+{
+	font-weight: normal;
+	border-left: solid 1px #10659E;
+	float: right;
+}
+
+a.wm_accountslist_item_link
+{
+	color: white;
+	text-decoration: none;
+}
+
+a.wm_accountslist_item_link:hover
+{
+	text-decoration: underline;
+}
+
+.wm_toolbar
+{
+	width: 100%;
+	height: 30px;
+	padding: 0px;
+	background: #7FB7E1 url(wm_toolbar_back.gif) repeat-x;
+}
+
+.wm_toolbar_item
+{
+	padding: 4px;
+	float: left;
+	display: block;
+	color: #212121;
+	border: none;
+	cursor: pointer;
+	cursor: hand;
+	font: normal 11px Tahoma, Arial, Helvetica, sans-serif;
+	vertical-align: middle;
+}
+
+.wm_toolbar_item_over
+{
+	padding: 3px;
+	float: left;
+	display:block;
+	background : #E9F2F8;
+	color: #212121;
+	border: solid 1px #369;
+	cursor: pointer;
+	cursor: hand;
+	font: normal 11px Tahoma, Arial, Helvetica, sans-serif;
+}
+
+.wm_icon
+{
+	vertical-align: text-bottom;
+}
+
+.wm_space_amount
+{
+	width: 100px;
+	height: 4px;
+	background: white;
+	border: solid 1px #039;
+}
+
+.wm_email_space, .wm_email_space_indicator
+{
+	float: right;
+	padding: 3px;
+	font: normal 11px Tahoma, Arial, Helvetica, sans-serif;
+}
+
+.wm_email_space_indicator
+{
+	padding-top: 5px;
+}
+
+.wm_space_used
+{
+	background: red;
+	height: 2px;
+}
+
+.wm_error_div{
+	background: #FFFFFF;
+	color: #BB0000;
+	border: 2px solid #FF0000;
+	font: 11px Tahoma;
+	width: 250px;
+	padding: 1px;
+}
+
+.wm_error_header{
+	background: #BB0000;
+	color: #FFFFFF;
+	padding: 2px;
+	padding: 8px;
+	text-align: center;
+}
+
+.wm_error_text{
+	padding: 8px;
+}
+
+.wm_error_button{
+	margin-bottom: 4px;
+	padding: 4px 8px 4px 8px;
+	width: 30px;
+	border: 1px solid #bb0000;
+}
+
+.wm_loading_div
+{
+	position: absolute;
+	right: 10px;
+	background: #BADBFF;
+	color: #000000;
+	font: 11px Tahoma;
+	padding: 8px 24px 8px 24px;
+}
+
+.wm_list, .wm_messages
+{
+	margin: 0px;
+	border-collapse: collapse;
+	width: 100%;
+}
+
+.wm_info
+{
+	background : #ffffff;
+	font: normal 11px Tahoma;
+	color: #003366;
+	border: none 1px #5D77BB;
+	margin: 10px;
+	padding: 6px;
+}
+
+.wm_info_id
+{
+	background : #ffffff;
+	font: normal 11px Tahoma;
+	color: #003366;
+	border: solid 1px #808080;
+	margin: 0px;
+	padding: 6px;
+}
+
+.wm_list_center_header, .wm_list_left_header
+{
+	padding: 2px;
+	background: #DBEAF5;
+	color: #10659E;
+	font: normal 11px Tahoma, Arial, Helvetica, sans-serif;
+}
+
+.wm_list_center_header
+{
+	text-align: center;
+}
+
+.wm_list_left_header
+{
+	text-align: left;
+}
+
+.wm_list_readitem, .wm_list_readitem_selected
+{ 
+	padding: 2px;
+	font: normal 11px Arial, Tahoma, Helvetica, sans-serif;
+	padding: 1px;
+	border-color: #C1CDD8 #FFF #C1CDD8 #FFF;
+	border-style: solid;
+	border-width: 1px 0px 1px 0px;
+}
+
+.wm_list_readitem
+{
+	background: white;
+}
+
+.wm_list_readitem_selected
+{
+	background: #C1CDD8;
+}
+
+.wm_list_center_cell, .wm_list_left_cell
+{ 
+	padding: 1px;
+	border-color: #C1CDD8 #FFF #C1CDD8 #FFF;
+	border-style: solid;
+	border-width: 1px 0px 1px 0px;
+}
+
+.wm_list_left_cell
+{
+	text-align: left;
+}
+
+.wm_list_center_cell
+{
+	text-align: center;
+}
+
+.wm_list_subject
+{ 
+	overflow: hidden;
+	width: 100%;
+	height: 15px;
+}
+
+a.wm_list_item_link
+{
+	color: #009;
+	font-family: Tahoma, Arial, Helvetica, sans-serif;
+	text-decoration: none;
+}
+
+a.wm_list_item_link:hover
+{
+	text-decoration: underline;
+}
+
+.wm_attachment_gif
+{
+	width: 13px;
+	height: 14px;
+}
+
+.wm_lowtoolbar
+{
+	color: black;
+	font: normal 11px Tahoma, Arial, Helvetica, sans-serif;
+	background: #DBEAF5;
+	border: solid 1px;
+	border-color: #DBEAF5 #DBEAF5 #C1CDD8 #DBEAF5;
+}
+
+.wm_lowtoolbar_item, .wm_lowtoolbar_pages, .wm_lowtoolbar_headers
+{
+	padding: 4px 4px 4px 0px;
+	display: block;
+	font: normal 12px Tahoma, Arial, Helvetica, sans-serif;
+}
+
+.wm_lowtoolbar_item
+{
+	float: left;
+	padding-left: 4px;
+}
+
+.wm_lowtoolbar_pages, .wm_lowtoolbar_headers
+{
+	float: right;
+}
+
+.wm_lowtoolbar_item_selected
+{
+	float: left;
+	display: block;
+}
+
+.wm_lowtoolbar_item_selected, .wm_lowtoolbar_page_selected
+{
+	padding: 4px 4px 4px 0px;
+	font: bold 12px Tahoma, Arial, Helvetica, sans-serif;
+}
+
+.wm_message, .wm_attach
+{
+	width: 100%;
+	background: #DBEAF5;
+	border-collapse: collapse;
+}
+
+.wm_new_message
+{
+	padding: 0px 10px 0px 10px;
+	background : #DBEAF5;
+}
+
+.wm_view_message_data, .wm_new_message_data, .wm_message_importance
+{
+	padding: 2px 5px 2px 15px;
+	background: #DBEAF5;
+	border: none;
+	color: Black;
+	font: normal 12px Tahoma, Arial, Helvetica, sans-serif;
+}
+
+.wm_message_importance
+{
+	width: 10%;
+}
+
+.wm_new_message_data, .wm_message_importance
+{
+	text-align: right;
+}
+
+.wm_view_message_data
+{
+	text-align: left;
+}
+
+.wm_message_value
+{
+	padding: 2px 2px 2px 4px;
+	background: #DBEAF5;
+	border: none;
+	text-align: left;
+	font: normal 12px Tahoma, Arial, Helvetica, sans-serif;
+}
+
+.wm_message_body
+{
+	background: white;
+	width: 96%;
+	text-align: left;
+	padding: 8px;
+	padding-bottom: 10px;
+	font: normal 12px Tahoma, Arial, Helvetica, sans-serif;
+}
+
+.wm_message_body_
+{
+	background: white;
+}
+
+.wm_message_body_quotation
+{
+	color: Maroon;
+}
+
+.wm_message_rfc822
+{
+	background: #F2F2F2;
+	font: normal 12px Tahoma, Arial, Helvetica, sans-serif;
+	color: #212121;
+	border: solid 1px #E0E0E0;
+	padding: 2px 2px 2px 4px;
+	margin-bottom: 10px;
+}
+
+.wm_attach_data, .wm_new_attach_data
+{
+	background : #DBEAF5;
+	font: normal 11px Tahoma, Arial, Helvetica, sans-serif;
+	color: #000000;
+	border : solid 1px #5D77BB;
+	margin: 0px;
+	padding: 2px 2px 2px 4px;
+	width: 90px;
+}
+
+.wm_attach_data
+{
+	text-align: left;
+	border-left : 0px;
+}
+
+.wm_new_attach_data
+{
+	text-align: right;
+	border-left : solid 1px #DBEAF5;
+}
+
+.wm_attach_value_icon, .wm_attach_value_text, .wm_new_attach_value
+{
+	background : #DBEAF5;
+	font: normal 11px Tahoma, Arial, Helvetica, sans-serif;
+	color: #003366;
+	border: solid 1px #5D77BB;
+	margin: 0px;
+	padding: 2px 2px 2px 4px;
+	text-align: left;
+	vertical-align: middle;
+}
+
+.wm_new_message .wm_attach_value_text
+{
+	border-right: 0px;
+}
+
+.wm_attach_value_icon
+{
+	border-right: 0px;
+}
+
+.wm_attach_value_text
+{
+	border-left: 0px;
+	width: 100%;
+}
+
+.wm_new_attach_value
+{
+	border-right : 0px;
+}
+
+.wm_file_icon
+{
+	width: 16px;
+	height: 16px;
+	vertical-align: middle;
+}
+
+.wm_regular, .wm_copyright
+{
+	color: white;
+	font: normal 11px Tahoma, Arial, Helvetica, sans-serif;
+	border: none;
+}
+
+.wm_copyright
+{
+	margin: 30px;
+	text-align: center;
+}
+
+.wm_button
+{
+	height: 23px; 
+	padding: 0px 4px 0px 4px;
+	cursor: pointer;
+	cursor: hand;
+	font: bold 13px Tahoma, Arial, Helvetica, sans-serif;
+}
+
+.wm_file
+{
+	font: normal 13px Tahoma, Arial, Helvetica, sans-serif;
+	background-color: #ffffff; 
+	height: 23px; 
+	width: auto;
+}
+
+.wm_input, .wm_login_input
+{
+	font: 13px Tahoma, Arial, Helvetica, sans-serif;
+	color: black;
+	text-indent: 1px;
+	border: solid 1px #5B86A8;
+	background-color: #ffffff;
+}
+
+.wm_login_input
+{
+	width: 99%;
+}
+
+.wm_print
+{
+	border-collapse: collapse;
+	width: 96%;
+}
+
+.wm_print_content
+{
+	padding: 4px;
+	border: solid #666666;
+	font: normal 11px Tahoma, Arial, Helvetica, sans-serif;
+	text-align: left;
+}
+
+.wm_logo
+{
+	height: 56px;
+	background: url(logo.gif) no-repeat center;
+	border: none;
+}

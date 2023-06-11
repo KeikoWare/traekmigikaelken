@@ -1,0 +1,608 @@
+body, .wm_body, .wm_body_main
+{
+	background: white;
+}
+
+label
+{
+	cursor: pointer;
+	cursor: hand;
+}
+
+img
+{
+	border: 0;
+}
+
+td
+{
+	margin: 0em;
+	padding: 0em;
+}
+
+.wm_log_file
+{
+	padding: 8px 8px 0px 0px;
+	font: 13px Tahoma, Arial, Helvetica, sans-serif;
+	text-align: right;
+}
+
+.wm_space_before
+{
+	padding-top: 5px;
+}
+
+a.wm_reg
+{
+	font: 12px Tahoma, Courier New;
+	color: #cc0000;
+}
+a.wm_reg:hover
+{
+	color: #ff0000;
+}
+
+.wm_dialog, .wm_mailadm_console_dialog
+{
+	margin: 20px 0px 20px 0px;
+	border-collapse: collapse;
+}
+
+.wm_mailadm_dialog
+{
+	margin: 20px 0px 20px 0px;
+	border-collapse: separate;
+}
+
+.wm_mailadm_dialog_settings_header, .wm_mailadm_dialog_header, .wm_dialog_login_header,
+.wm_dialog_redirect_header
+{
+	padding: 6px;
+	background: red;
+	color: white;
+	font: bold 16px Courier New;
+}
+
+.wm_mailadm_dialog_settings_header, .wm_dialog_redirect_header
+{
+	text-align: left;
+}
+
+.wm_dialog_mailadm_header, .wm_dialog_login_header
+{
+	text-align: right;
+}
+
+.wm_dialog_login_switcher
+{
+	padding-top: 4px;
+	display: block;
+	float: left;
+}
+
+.wm_dialog_login_button
+{
+	display: block;
+	float: right;
+}
+
+.wm_dialog_login_field, .wm_dialog_field, .wm_dialog_hide_login_field, .wm_dialog_redirect_field
+{
+	padding: 4px;
+	background: #e6e6e6;
+	color: #333;
+	border: 0px;
+	border-top: solid 1px #ccc;
+	font: 14px Courier New;
+}
+
+.wm_dialog_field
+{
+	text-align: right;
+}
+
+.wm_dialog_login_field
+{
+	text-align: left;
+	vertical-align: middle;
+}
+
+.wm_dialog_hide_login_field
+{
+	text-align: right;
+	vertical-align: top;
+}
+
+.wm_dialog_redirect_field
+{
+	text-align: right;
+	vertical-align: middle;
+}
+
+.wm_dialog_button_field
+{
+	padding: 6px;
+	background: #e6e6e6;
+	color: #333;
+	border: 0px;
+	border-top: solid 1px #ccc;
+	font: 14px Courier New;
+	text-align: right;
+ }
+
+.wm_dialog_edit, .wm_dialog_button_edit, .wm_dialog_edit_disabled
+{
+	padding: 4px;
+	background: #f6f6f6;
+	color: black;
+	border: 0px;
+	border-top: solid 1px #ccc;	
+	font: 14px Courier New;
+}
+
+.wm_dialog_edit, .wm_dialog_edit_disabled
+{
+	text-align: left;
+}
+
+.wm_dialog_edit_disabled
+{
+	color: #aaaaaa;
+}
+
+.wm_dialog_button_edit
+{
+	text-align: right;
+}
+
+.wm_accountslist
+{
+	width: 100%;
+	background: red;
+	color: White;
+	border: 0px;
+	font: bold 14px Courier New;
+}
+
+.wm_accountslist_item, .wm_accountslist_item_selected
+{
+	padding: 6px;
+	display: block;
+}
+
+.wm_accountslist .wm_accountslist_item_selected
+{
+	float: left;
+}
+
+.wm_accountslist .wm_accountslist_item
+{
+	float: right;
+}
+
+a.wm_accountslist_item_link
+{
+	color: White;
+	text-decoration: none;
+}
+
+a.wm_accountslist_item_link:hover
+{
+	color: White;
+	text-decoration: underline;
+}
+
+.wm_toolbar
+{
+	width: 100%;
+	background: #e6e6e6;
+	border-bottom: solid 1px #999;
+}
+
+.wm_toolbar_item, .wm_toolbar_item_over
+{
+	float: left;
+	display:block;
+	cursor: pointer;
+	cursor: hand;
+	color: #212121;
+	font: normal 11px Courier New;
+}
+
+.wm_toolbar_item
+{
+	padding: 3px 5px 3px 5px;
+	border: 0px;
+}
+
+.wm_toolbar_item_over
+{
+	padding: 2px 4px 2px 4px;
+	background: #f6f6f6;
+	border: solid 1px #ccc;
+}
+
+.wm_icon
+{
+	vertical-align: text-bottom;
+}
+
+.wm_email_space, .wm_email_space_indicator
+{
+	float: right;
+	padding: 0px 3px 0px 3px;
+	color: #cc0000;
+	font: 14px Courier New;
+}
+
+.wm_email_space_indicator
+{
+	width: 0px;
+}
+
+.wm_error_div{
+	background: #FFFFFF;
+	color: #BB0000;
+	border: 2px solid #FF0000;
+	font: 11px Tahoma;
+	width: 250px;
+	padding: 1px;
+}
+
+.wm_error_header{
+	background: #BB0000;
+	color: #FFFFFF;
+	padding: 2px;
+	padding: 8px;
+	text-align: center;
+}
+
+.wm_error_text{
+	padding: 8px;
+}
+
+.wm_error_button{
+	margin-bottom: 4px;
+	padding: 4px 8px 4px 8px;
+	width: 30px;
+	border: 1px solid #bb0000;
+}
+
+.wm_loading_div
+{
+	position: absolute;
+	right: 10px;
+	background: #BADBFF;
+	color: #000000;
+	font: 11px Tahoma;
+	padding: 8px 24px 8px 24px;
+}
+
+.wm_list
+{
+	border-collapse: collapse;
+	border: none;
+	font: 12px Courier New;
+	width: 100%;
+}
+
+.wm_messages
+{
+	margin: 0px;
+	border-collapse: collapse;
+	width: 100%;
+}
+
+.wm_list_center_header, .wm_list_left_header
+{
+	background: #efefef;
+	color: #cc0000;
+	border-bottom: solid 1px #e9e9e9;
+	font-weight: bold;
+}
+
+.wm_list_center_header
+{
+	text-align: center;
+}
+
+.wm_list_left_header
+{
+	text-align: left;
+}
+
+.wm_list_readitem
+{
+	background: #f6f6f6;
+	font-weight: bold;
+}
+
+.wm_list_readitem_selected
+{
+	background: white;
+	font-weight: normal;
+}
+
+.wm_list_center_cell, .wm_list_left_cell
+{
+	color: #212121;
+	padding: 0px 4px 0px 4px;
+}
+
+.wm_list_left_cell
+{
+	text-align: left;
+}
+
+.wm_list_center_cell
+{
+	text-align: center;
+}
+
+.wm_list_subject
+{ 
+	overflow: hidden;
+	width: 100%;
+	height: 15px;
+}
+
+a.wm_list_item_link	
+{
+	color: #cc0000;
+}
+
+a.wm_list_item_link:hover
+{
+	color: #ff0000;
+}
+
+.wm_list_readitem a.wm_list_item_link
+{
+	color: #333;
+}
+
+.wm_list_readitem a.wm_list_item_link:hover
+{
+	color: #666;
+}
+
+.wm_list_readitem_selected a.wm_list_item_link
+{
+	color: #cc0000; font-weight: normal;
+}
+
+.wm_list_readitem_selected a.wm_list_item_link:hover
+{
+	color: red; font-weight: normal;
+}
+
+.wm_attachment_gif
+{
+	width: 13px;
+	height: 14px;
+}
+
+.wm_lowtoolbar
+{
+	color: #333;
+	border-top: solid 1px #f6f6f6;
+	font: 11px Courier New;
+}
+
+.wm_lowtoolbar_item, .wm_lowtoolbar_pages, .wm_lowtoolbar_headers
+{
+	padding: 0px 2px 2px 2px;
+	display: block;
+	border: none;
+}
+
+.wm_lowtoolbar_pages, .wm_lowtoolbar_headers
+{
+	float: right;
+}
+
+.wm_lowtoolbar_item
+{
+	float: left;
+	padding-left: 4px;
+}
+
+.wm_lowtoolbar_item_selected, .wm_lowtoolbar_page_selected
+{
+	padding: 0px 2px 2px 2px;
+	border: none;
+	color: #333;
+	font: 11px Courier New;
+}
+.wm_lowtoolbar_item_selected{float: left; display: block;}
+
+.wm_message
+{
+	width: 100%;
+	margin: 2px 0px 2px 0px;
+	border-collapse: collapse;
+	border: solid 1px #999;
+	color: #333;
+	font: 14px Courier New;
+}
+
+.wm_new_message
+{
+	width: 100%;
+}
+
+.wm_view_message_data, .wm_new_message_data, .wm_message_importance
+{
+	padding: 4px;
+	background: #e6e6e6;
+	border: none;
+	border-bottom: solid 1px #ccc;
+	text-align: left;	
+}
+
+.wm_message_importance
+{
+	width: 10%;
+}
+
+.wm_message_value
+{
+	padding: 4px;
+	background: #f6f6f6;
+	border: 0px;
+	border-bottom: solid 1px #ccc;	
+	text-align: left;
+}
+
+.wm_message_body
+{
+	padding: 8px;
+	color: black;
+	border-bottom: solid 1px #999;
+	font: normal 16px Courier New;
+	text-align: left;
+}
+
+.wm_message_body_
+{
+}
+
+.wm_message_rfc822
+{
+	padding-bottom: 20px;
+}
+
+.wm_attach
+{
+	width: 100%;
+	margin: 0px;
+	border-collapse: collapse;
+	border: 0px;
+	color: #333;
+	font: 14px Courier New;
+}
+
+.wm_attach_data, .wm_attach_value_icon,  .wm_attach_value_text, .wm_new_attach_data, .wm_new_attach_value
+{
+	padding-left: 4px;
+	background: #f6f6f6;
+	border-bottom: solid 1px #999;
+	text-align: left;
+	vertical-align: middle;
+}
+
+.wm_attach_value_text
+{
+	width: 100%;
+	border-left: 0px;
+}
+
+.wm_attach_value_icon
+{
+	border-right: 0px;
+}
+
+.wm_new_attach_data
+{
+	background: #e6e6e6;
+}
+
+.wm_file_icon
+{
+	width: 16px;
+	height: 16px;
+	vertical-align: middle;
+}
+
+.wm_regular, .wm_copyright
+{
+	color: #cc0000;
+	border: 0px;
+	font: 13px Courier New;
+}
+
+.wm_copyright
+{
+	margin: 30px;
+	text-align: center;
+}
+
+.wm_file
+{
+	height: 23px;
+	background: #fcfcfc;
+	color: #cc0000;
+	border: solid 1px #999;
+}
+
+.wm_button
+{
+	height: 23px;
+	border: solid 1px;
+	border-color: #999 #333 #666 #999;
+	cursor: pointer;
+	cursor: hand;
+	background: #fcfcfc;
+	color: #cc0000;
+	font: 13px Courier New;
+	padding: 0px 4px 0px 4px;
+}
+
+.wm_input, .wm_login_input
+{
+	border: solid 1px #999;
+	color: red;
+	font-family: Courier New;
+	text-indent: 1px;
+}
+
+.wm_login_input
+{
+	width: 99%;
+}
+
+.wm_print_content
+{
+	font: 13px Courier New;
+	text-align: left;
+}
+
+.wm_logo
+{
+	border: none;
+}
+
+select
+{
+	border: solid 1px #999;
+	font: 13px Courier New;
+	color: #cc0000;
+}
+
+textarea
+{
+	overflow: auto;
+	width: 90%;
+}
+
+.wm_info
+{
+	background : #ffffff;
+	font: normal 11px Tahoma;
+	color: #003366;
+	border: none 1px #5D77BB;
+	margin: 10px;
+	padding: 6px;
+}
+
+.wm_info_id
+{
+	background : #ffffff;
+	font: normal 11px Tahoma;
+	color: #003366;
+	border: solid 1px #808080;
+	margin: 0px;
+	padding: 6px;
+}
+
+

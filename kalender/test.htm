@@ -1,0 +1,217 @@
+<html>
+<head>
+<SCRIPT LANGUAGE="JavaScript">
+<!-- Begin
+function moveOver()  
+{
+	var boxLength = document.choiceForm.choiceBox.length;
+	var selectedItem = document.choiceForm.available.selectedIndex;
+	if (selectedItem != -1){
+	var selectedText = document.choiceForm.available.options[selectedItem].text;
+	var selectedValue = document.choiceForm.available.options[selectedItem].value;
+	var i;
+	var isNew = true;
+	if (boxLength != 0) {
+		for (i = 0; i < boxLength; i++) {
+			thisitem = document.choiceForm.choiceBox.options[i].text;
+			if (thisitem == selectedText) {
+				isNew = false;
+				break;
+	    }
+	  }
+	} 
+	if (isNew) {
+		newoption = new Option(selectedText, selectedValue, false, false);
+		document.choiceForm.choiceBox.options[boxLength] = newoption;
+	}
+	removeYou();
+	saveMe();
+	document.choiceForm.available.selectedIndex=-1;
+	}
+}
+
+function moveBack()  
+{
+	var boxLength = document.choiceForm.available.length;
+	var selectedItem = document.choiceForm.choiceBox.selectedIndex;
+	if (selectedItem != -1){
+	var selectedText = document.choiceForm.choiceBox.options[selectedItem].text;
+	var selectedValue = document.choiceForm.choiceBox.options[selectedItem].value;
+	var i;
+	var isNew = true;
+	if (boxLength != 0) {
+		for (i = 0; i < boxLength; i++) {
+			thisitem = document.choiceForm.available.options[i].text;
+			if (thisitem == selectedText) {
+				isNew = false;
+				break;
+	    }
+	  }
+	} 
+	if (isNew) {
+		newoption = new Option(selectedText, selectedValue, false, false);
+		document.choiceForm.available.options[boxLength] = newoption;
+	}
+	removeMe();
+	saveMe();
+	document.choiceForm.choiceBox.selectedIndex=-1;
+	}	
+}
+
+
+function removeMe() {
+	var boxLength = document.choiceForm.choiceBox.length;
+	arrSelected = new Array();
+	var count = 0;
+	for (i = 0; i < boxLength; i++) {
+		if (document.choiceForm.choiceBox.options[i].selected) {
+			arrSelected[count] = document.choiceForm.choiceBox.options[i].value;
+		}
+		count++;
+	}
+	var x;
+	for (i = 0; i < boxLength; i++) {
+		for (x = 0; x < arrSelected.length; x++) {
+			if (document.choiceForm.choiceBox.options[i].value == arrSelected[x]) {
+				document.choiceForm.choiceBox.options[i] = null;
+   		}
+		}
+		boxLength = document.choiceForm.choiceBox.length;
+  }
+}
+
+function removeYou() {
+	var boxLength = document.choiceForm.available.length;
+	arrSelected = new Array();
+	var count = 0;
+	for (i = 0; i < boxLength; i++) {
+		if (document.choiceForm.available.options[i].selected) {
+			arrSelected[count] = document.choiceForm.available.options[i].value;
+		}
+		count++;
+	}
+	var x;
+	for (i = 0; i < boxLength; i++) {
+		for (x = 0; x < arrSelected.length; x++) {
+			if (document.choiceForm.available.options[i].value == arrSelected[x]) {
+				document.choiceForm.available.options[i] = null;
+   		}
+		}
+		boxLength = document.choiceForm.available.length;
+  }
+}
+
+function saveMe() {
+	var strValues = "";
+	var boxLength = document.choiceForm.choiceBox.length;
+	var count = 0;
+	if (boxLength != 0) {
+		for (i = 0; i < boxLength; i++) {
+			if (count == 0) {
+				strValues = document.choiceForm.choiceBox.options[i].value;
+			}
+			else {
+				strValues = strValues + "," + document.choiceForm.choiceBox.options[i].value;
+			}
+			count++;
+		}
+	}
+	document.choiceForm.arg4.value = strValues;
+}
+
+function showMe() {
+	var strValues = "";
+	var boxLength = document.choiceForm.choiceBox.length;
+	var count = 0;
+	if (boxLength != 0) {
+		for (i = 0; i < boxLength; i++) {
+			if (count == 0) {
+				strValues = document.choiceForm.choiceBox.options[i].value;
+			}
+			else {
+				strValues = strValues + "," + document.choiceForm.choiceBox.options[i].value;
+			}
+			count++;
+		}
+	}
+	if (strValues.length == 0) {
+		alert("You have not made any selections");
+	}
+	else {
+		alert("Here are the values you've selected:\r\n" + strValues);
+  }
+}
+//  End -->
+</script>
+<7head>
+<body>
+   <table width="100%">
+      <tr>
+        <td class="forum" width="100%">
+<form name="choiceForm" action="" method="post">
+	<BR>
+	<input type="text" name="relation" value="">
+	<input type="text" name="arg1" value="$TableMain">
+	<input type="text" name="arg2" value="$recMain[0]">
+	<input type="text" name="arg3" value="$TableSub">
+	<input type="text" name="arg4" value="">
+	<B>Vælg dem du vil inviterere</B><BR>
+
+<table border=0>
+<tr>
+<td valign="top" width=175>
+Computere på lager:
+<br>
+<select  name="available" style="width:150;" size="10" ondblclick="moveOver();">";
+<option value="1">recSub[1]</option>
+<option value="2">recSub[2]</option>
+<option value="3">recSub[3]</option>
+<option value="4">recSub[4]</option>
+<option value="5">recSub[5]</option>
+<option value="6">recSub[6]</option>
+</select>
+<CENTER><input type="button" value="Reserver" onclick="moveOver();"></CENTER>
+</td>
+<td valign="top">
+Din reservation:
+<br>
+<select name="choiceBox" style="width:150;" size="10" ondblclick="moveBack();">
+</select>
+<CENTER><input type="button" value="Fjern" onclick="moveBack();"></CENTER>
+</td>
+</tr>
+<tr>
+<td colspan=2 height=10>
+
+<input type="button" value="Vis index's" onclick="showMe();">
+</td>
+</tr>
+</table>
+<input type=submit class='but' value='opdater'>
+</FORM>
+				</td>
+      </tr>
+    </table>
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+function Flyt(V)  
+{
+	var boxLength = document.choiceForm.available.length;
+	var i;
+	var isNew = true;
+	if (boxLength != 0) {
+		for (i = 0; i < boxLength; i++) {
+			thisitem = document.choiceForm.available.options[i].value;
+			if (thisitem == V) {
+				document.choiceForm.available.selectedIndex = i
+				break;
+	    }
+	  }
+	} 
+	moveOver();
+	document.choiceForm.available.selectedIndex=-1;
+}
+
+	$xRecord = 0;
+
+</SCRIPT>

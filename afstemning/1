@@ -1,0 +1,33 @@
+CREATE TABLE `poll_hoved` (
+  `id` bigint(20) NOT NULL auto_increment,
+  `userid` bigint(20) NOT NULL default '0',
+  `headline` varchar(250) NOT NULL default '',
+  `content` text NOT NULL,
+  `multiple` tinyint(1) NOT NULL default '0',
+  `finalid` bigint(20) NOT NULL default '0',
+  `comment` text NOT NULL,
+  `added` timestamp(14) NOT NULL, default '00000000000000',
+  `edited` timestamp(14) NOT NULL default '00000000000000',
+  `ended` timestamp(14) NOT NULL default '00000000000000',
+  `deleted` timestamp(14) NOT NULL default '00000000000000',
+  PRIMARY KEY  (`id`)
+) TYPE=MyISAM AUTO_INCREMENT=1 ;
+
+CREATE TABLE `poll_indhold` (
+  `id` bigint(20) NOT NULL auto_increment,
+  `pollid` bigint(20) NOT NULL default '0',
+  `headline` varchar(250) NOT NULL default '',
+  `comment` text NOT NULL,
+  `added` timestamp(14) NOT NULL,
+  `deleted` timestamp(14) NOT NULL default '00000000000000',
+  PRIMARY KEY  (`id`)
+) TYPE=MyISAM AUTO_INCREMENT=1 ;
+
+CREATE TABLE `poll_valg` (
+`id` BIGINT NOT NULL AUTO_INCREMENT PRIMARY KEY ,
+`userid` BIGINT NOT NULL ,
+`choiceid` BIGINT NOT NULL ,
+`added` TIMESTAMP NOT NULL ,
+`changed` TIMESTAMP NOT NULL ,
+`deleted` TIMESTAMP NOT NULL ) TYPE = MYISAM ;
+

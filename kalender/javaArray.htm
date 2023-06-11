@@ -1,0 +1,23 @@
+<script type="text/javascript">
+
+var arr = new Array(3)
+arr[0] = "Jani,34"
+arr[1] = "Hege,13"
+arr[2] = "Stale,54"
+
+var tmparr = new Array()
+
+document.write(arr.join() + "<br />")
+document.write(arr.join(";") + "<br />")
+
+tmparr[tmparr.length] = arr[2]
+tmparr[tmparr.length] = arr[0]
+tmparr = tmparr.sort()
+
+arr.length = 2
+document.write(arr.join(";") + "<br />")
+arr[arr.length] = "Gunnar"
+document.write(arr.join(";") + "<br />")
+
+document.write(tmparr.join(";") + "<br />")
+</script>

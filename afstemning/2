@@ -1,0 +1,10 @@
+
+
+NEW POLL
+
+INSERT INTO `poll_hoved` ( `id` , `userid` , `headline` , `content` , `multiple` , `finalid` , `comment` , `added` , `edited` , `ended` , `deleted` ) 
+VALUES (
+NULL , '7', 'Test 01', 'Test 01 dato', '1', '0', '', NOW( ) , '00000000000000', '00000000000000', '00000000000000'
+);
+
+
